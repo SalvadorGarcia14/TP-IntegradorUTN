@@ -1,0 +1,91 @@
+Algoritmo Ejercicio1BusquedayOrdenamientoUnidad4
+	
+	Definir dniBuscado Como Caracter
+	
+	Dimension pacientes[8, 5]
+	// Carga de datos de los pacientes
+	pacientes[0, 0] <- "Ana"
+	pacientes[0, 1] <- "Martinez"
+	pacientes[0, 2] <- "17123456"
+	pacientes[0, 3] <- "+541141200011"
+	pacientes[0, 4] <- "56"
+	
+	pacientes[1, 0] <- "Camila"
+	pacientes[1, 1] <- "Noe"
+	pacientes[1, 2] <- "25789101"
+	pacientes[1, 3] <- "+543419485831"
+	pacientes[1, 4] <- "45"
+	
+	pacientes[2, 0] <- "Bruno"
+	pacientes[2, 1] <- "Noe"
+	pacientes[2, 2] <- "39121314"
+	pacientes[2, 3] <- "+541145565789"
+	pacientes[2, 4] <- "26"
+	
+	pacientes[3, 0] <- "Dardo"
+	pacientes[3, 1] <- "Pistilli"
+	pacientes[3, 2] <- "21151617"
+	pacientes[3, 3] <- "+541158637543"
+	pacientes[3, 4] <- "48"
+	
+	pacientes[4, 0] <- "Ernestina"
+	pacientes[4, 1] <- "Quesada"
+	pacientes[4, 2] <- "33181920"
+	pacientes[4, 3] <- "+541161294758"
+	pacientes[4, 4] <- "35"
+	
+	pacientes[5, 0] <- "Fausto"
+	pacientes[5, 1] <- "Ramirez"
+	pacientes[5, 2] <- "15.212223"
+	pacientes[5, 3] <- "+543423444567"
+	pacientes[5, 4] <- "60"
+	
+	pacientes[6, 0] <- "Jasm�n"
+	pacientes[6, 1] <- "Sosa"
+	pacientes[6, 2] <- "40242526"
+	pacientes[6, 3] <- "+543402512345"
+	pacientes[6, 4] <- "25"
+	
+	pacientes[7, 0] <- "Leonardo"
+	pacientes[7, 1] <- "Tolosa"
+	pacientes[7, 2] <- "11272829"
+	pacientes[7, 3] <- "+541151234567"
+	pacientes[7, 4] <- "70"
+	
+	Escribir "Ingrese el n�mero de DNI del paciente a buscar:"
+	Leer dniBuscado
+	
+	BuscarPaciente(pacientes,dniBuscado)
+	
+FinAlgoritmo
+
+
+SubProceso BuscarPaciente(pacientes Por Referencia,dniBuscado)
+	Definir i Como Entero
+	linea
+	// B�squeda secuencial del paciente por DNI
+	Encontrado = Falso
+	Para i = 0 Hasta 7 Con Paso 1 Hacer
+		Si pacientes[i, 2] = dniBuscado Entonces
+			Escribir "Paciente encontrado:"
+			Escribir "Nombre:", pacientes[i, 0]
+			Escribir "Apellido:", pacientes[i, 1]
+			Escribir "Tel�fono:", pacientes[i, 3]
+			Escribir "Edad:", pacientes[i, 4]
+			Encontrado = Verdadero
+		FinSi
+	FinPara
+	
+	Si No Encontrado Entonces
+		Escribir "No se encontr� ning�n paciente con ese n�mero de DNI."
+	FinSi
+	linea
+	
+FinSubProceso
+
+SubProceso linea
+	para i = 1 Hasta 20 Con Paso 1
+		Escribir Sin Saltar "-"
+	FinPara
+	Escribir ""
+FinSubProceso
